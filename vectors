@@ -1,0 +1,46 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void fillvector(const vector<int>& )
+{
+	
+}
+
+void printvector(const vector<int>&)
+{
+	
+}
+
+void fillvector(vector<int>& Hoyin)
+{
+	cout<<"Type in a list of numbers, type -1 when you are done"<<endl;
+	int n;
+	cin>>n;
+	while(n != -1)
+	{
+		Hoyin.push_back(n);
+		cin>>n;
+	}
+}
+
+void printvector(vector<int>& Hoyin)
+{
+	int R;  
+	R=0;
+	for(unsigned int x=0; x < Hoyin.size(); x++)
+	{
+		//cout<<Hoyin[x];
+		R=R+Hoyin[x];
+	}
+	cout<<R;
+}
+
+int main()
+{   
+	vector<int> Hoyos;
+	fillvector(Hoyos);
+	printvector(Hoyos);
+	return 0;
+}
